@@ -15,7 +15,7 @@ Die Mitarbeiter können anhand der Inputs verschiedene Infos angeben, damit die 
 
 2. Angebotsinfos
    - Freitag Anreise Car / individuell (radiobuttons) => Carplätze => Cargrösse
-   - (select)
+   - (Optional select)
       Freitag Skibillet (select) => Tagesbillet
       Freitag Schlitteln (select) => Hin-Rückbillet Gondel & Schlittelanmeldung
       Freitag Bergrestaurant (select) => Hin-Rückbillet Gondel
