@@ -1,0 +1,22 @@
+.FormDiv {
+    width: 50vw;
+    padding: 0 25vw 0 25vw;
+}
+
+.FormContent {
+    text-align:left;
+}
+
+.FormBlock {
+    padding: 10px 0;
+}
+
+
+.FormDiv input[type='radio'] {
+    visibility: inherit;
+    /* padding-right: .5em; */
+}
+
+.PadLeft {
+    padding-left: 1em;
+}
