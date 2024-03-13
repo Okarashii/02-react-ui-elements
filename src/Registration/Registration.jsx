@@ -13,8 +13,8 @@ export default function Registration({title, departments, activity}) {
             <form>
                 <div className="FormContent">
 
-                    <h3>{title}</h3>
-                    <h4>Registration</h4>
+                    <h2>{title}</h2>
+                    <h3>Registration</h3>
                     <hr />
                     
                     <h4>Personalien:</h4>
@@ -61,10 +61,11 @@ export default function Registration({title, departments, activity}) {
                     <div className="FormBlock">
                         Anreise (Hinfahrt Freitagmorgen):<br />
                         <label>
-                            <input type="radio" name="anreise" value="carbus" />
-                            Carbus
+                            <input type="radio" name="anreise" value="reisecar" />
+                            Reisecar
                         </label>
-                        <label className="PadLeft">
+                        <br />
+                        <label>
                             <input type="radio" name="anreise" value="individuell" />
                             individuell
                         </label>
@@ -87,21 +88,22 @@ export default function Registration({title, departments, activity}) {
 
                     <div className="FormBlock" style={{visibility:overnight ? "visible" : "hidden"}}>
                         Abreise (Rückfahrt Samstagmorgen):<br />
-                        <label>
-                            {overnight ? <input type="radio" name="abreise" value="carbus" /> : null}
-                            Carbus
+                        <label className="MargRight">
+                            {overnight ? <input type="radio" name="abreise" value="reisecar" /> : null}
+                            Reisecar
                         </label>
-                        <label className="PadLeft">
+                        <br />
+                        <label className="MargRight">
                             <input type={overnight ? "radio" : "hidden"} name="abreise" value="individuell" />
                             individuell
                         </label>
                     </div>
 
-                </div>
 
-                <hr />
-                <button type="submit">Registrierung absenden</button>
-                <button type="reset" onClick={() => setOvernight(false)}>Registrierung zurücksetzen</button>
+                    <hr />
+                    <button type="submit">Registrierung absenden</button>
+                    <button type="reset" onClick={() => setOvernight(false)} style={{marginLeft: '10px'}}>Registrierung zurücksetzen</button>
+                </div>
             </form>
         </div>
     );
