@@ -65,17 +65,17 @@ export default function Registration({title, departments, activities}) {
                         <br />
 
                         <label>Vorname:</label><br />
-                        <input type="text" id="fname" name="fname" placeholder="Vorname" value={firstname} onChange={(e) => setFirstname(e.target.value)}/><br />
+                        <input type="text" id="fname" required name="fname" placeholder="Vorname" value={firstname} onChange={(e) => setFirstname(e.target.value)}/><br />
 
                         <label>Nachname:</label><br />
-                        <input type="text" id="lname" name="lname" placeholder="Nachname" value={lastname} onChange={(e) => setLastname(e.target.value)}/>
+                        <input type="text" id="lname" required name="lname" placeholder="Nachname" value={lastname} onChange={(e) => setLastname(e.target.value)}/>
                     </div>
                     
                     <div className="FormBlock">
                         Abteilung:<br />
 
-                        <select id="departmentID" name="department" value={department}>
-
+                        <select id="departmentID" name="department" value={department} required>
+                            <option selected disabled value="">Bitte Abteilung auswählen</option>
                             {departments.map((i) => (
                                 <option value={i.toLowerCase()} key={i} onClick={(e) => setDepartment(e.target.value)}>{i}</option>
                             ))}
@@ -102,6 +102,7 @@ export default function Registration({title, departments, activities}) {
                     <div className="FormBlock">
                         Aktivität:<br />
                         <select id="activity" name="activity">
+                            <option selected disabled value="">Bitte Aktivität auswählen</option>
                             {activities.map((i) => (
                                 <option value={i.toLowerCase()} key={i} onClick={(e) => setActivity(e.target.value)}>{i}</option>
                             ))}
