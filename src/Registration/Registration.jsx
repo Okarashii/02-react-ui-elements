@@ -102,7 +102,7 @@ export default function Registration({title, departments, activities}) {
                     <div className="FormBlock">
                         Aktivität:<br />
                         <select id="activity" name="activity">
-                            <option selected disabled value="">Bitte Aktivität auswählen</option>
+                            <option selected value="keine">Keine Aktivität</option>
                             {activities.map((i) => (
                                 <option value={i.toLowerCase()} key={i} onClick={(e) => setActivity(e.target.value)}>{i}</option>
                             ))}
